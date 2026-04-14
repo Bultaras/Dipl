@@ -515,3 +515,308 @@ h1 {
   background: white;
   color: #1e1e1e;
 }
+
+/* ========================================
+   МОБИЛЬНАЯ АДАПТИВНОСТЬ
+   ======================================== */
+
+/* Планшетные устройства (768px - 992px) */
+@media (max-width: 991px) {
+  .navbar {
+    margin-bottom: 50px;
+  }
+
+  .navbar-nav {
+    font-size: 24px;
+  }
+
+  .carousel-item {
+    height: 500px;
+  }
+
+  .flip-card-inner {
+    width: 260px;
+    height: 390px;
+  }
+
+  .flip-card-front img {
+    width: 260px;
+    height: 390px;
+  }
+
+  .carousel-caption {
+    width: 257px;
+  }
+
+  .t {
+    width: 257px;
+  }
+
+  .tt {
+    width: 257px;
+  }
+
+  iframe {
+    width: 400px;
+    height: 400px;
+    margin-right: 20px;
+  }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 767px) {
+  #background-video {
+    min-width: 100%;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    margin-bottom: 30px;
+  }
+
+  .navbar-brand img {
+    height: 70px;
+  }
+
+  .navbar-nav {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .carousel-inner {
+    margin-bottom: 50px;
+  }
+
+  .carousel-item {
+    height: auto;
+    min-height: 450px;
+  }
+
+  .flip-card-character {
+    padding: 0 15px;
+  }
+
+  .flip-card-inner {
+    width: 100%;
+    max-width: 320px;
+    height: 480px;
+    margin: 0 auto;
+  }
+
+  .flip-card-front img {
+    width: 100%;
+    height: 480px;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+  }
+
+  .t {
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    font-size: 16px;
+    left: 0;
+  }
+
+  .tt {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    left: 0;
+  }
+
+  .flip-card-back {
+    padding: 12px;
+  }
+
+  .flip-card-back .back-content h5 {
+    font-size: 18px;
+  }
+
+  .flip-card-back .back-content p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .books {
+    margin-bottom: 80px;
+    gap: 20px;
+  }
+
+  .flip-card-book {
+    width: 100%;
+    max-width: 320px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .flip-card-book .flip-card-front img,
+  .flip-card-book .flip-card-back img {
+    height: 250px;
+  }
+
+  .flip-card-book .flip-card-back .back-content h5 {
+    font-size: 16px;
+  }
+
+  .flip-card-book .flip-card-back .back-content p {
+    font-size: 13px;
+  }
+
+  iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .if_one {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .ft {
+    display: inline-block;
+    margin: 10px 15px;
+  }
+
+  .btn-logout {
+    margin-top: 15px;
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Маленькие мобильные устройства (до 576px) */
+@media (max-width: 575px) {
+  .navbar-brand img {
+    height: 60px;
+  }
+
+  .navbar-nav {
+    font-size: 18px;
+  }
+
+  .carousel-item {
+    min-height: 400px;
+  }
+
+  .flip-card-inner {
+    height: 430px;
+  }
+
+  .flip-card-front img {
+    height: 430px;
+  }
+
+  .flip-card-back .back-content h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .flip-card-back .back-content p {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .flip-card-book {
+    height: 470px;
+  }
+
+  .flip-card-book .flip-card-front img,
+  .flip-card-book .flip-card-back img {
+    height: 220px;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .auth-form {
+    padding: 30px 25px;
+    width: 95%;
+  }
+
+  .auth-form h2 {
+    font-size: 24px;
+  }
+
+  .auth-form label {
+    font-size: 11px;
+  }
+
+  .auth-form input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+
+  .auth-form .btn-auth {
+    padding: 14px 25px;
+    font-size: 16px;
+  }
+}
+
+/* Очень маленькие экраны (до 400px) */
+@media (max-width: 399px) {
+  .navbar-brand img {
+    height: 50px;
+  }
+
+  .navbar-nav {
+    font-size: 16px;
+  }
+
+  .carousel-item {
+    min-height: 350px;
+  }
+
+  .flip-card-inner {
+    height: 380px;
+  }
+
+  .flip-card-front img {
+    height: 380px;
+  }
+
+  .flip-card-back .back-content p {
+    font-size: 10px;
+  }
+
+  .flip-card-book {
+    height: 440px;
+  }
+
+  .flip-card-book .flip-card-front img,
+  .flip-card-book .flip-card-back img {
+    height: 200px;
+  }
+
+  iframe {
+    height: 180px;
+  }
+
+  .auth-form {
+    padding: 25px 20px;
+  }
+
+  .auth-form h2 {
+    font-size: 20px;
+  }
+}

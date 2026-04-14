@@ -516,11 +516,6 @@ h1 {
   color: #1e1e1e;
 }
 
-/* ========================================
-   МОБИЛЬНАЯ АДАПТИВНОСТЬ
-   ======================================== */
-
-/* Планшетные устройства (768px - 992px) */
 @media (max-width: 991px) {
   .navbar {
     margin-bottom: 50px;
@@ -563,7 +558,6 @@ h1 {
   }
 }
 
-/* Мобильные устройства (до 768px) */
 @media (max-width: 767px) {
   #background-video {
     min-width: 100%;
@@ -584,7 +578,23 @@ h1 {
   }
 
   .carousel-inner {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition-delay: 0s !important;
     margin-bottom: 50px;
+  }
+
+  .books {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition-delay: 0s !important;
+    margin-bottom: 80px;
+    gap: 20px;
+  }
+
+  center {
+    opacity: 1 !important;
+    transition-delay: 0s !important;
   }
 
   .carousel-item {
@@ -645,11 +655,6 @@ h1 {
     line-height: 1.4;
   }
 
-  .books {
-    margin-bottom: 80px;
-    gap: 20px;
-  }
-
   .flip-card-book {
     width: 100%;
     max-width: 320px;
@@ -700,7 +705,6 @@ h1 {
   }
 }
 
-/* Маленькие мобильные устройства (до 576px) */
 @media (max-width: 575px) {
   .navbar-brand img {
     height: 60px;
@@ -708,6 +712,23 @@ h1 {
 
   .navbar-nav {
     font-size: 18px;
+  }
+
+  .carousel-inner {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition-delay: 0s !important;
+  }
+
+  .books {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition-delay: 0s !important;
+  }
+
+  center {
+    opacity: 1 !important;
+    transition-delay: 0s !important;
   }
 
   .carousel-item {
@@ -773,7 +794,6 @@ h1 {
   }
 }
 
-/* Очень маленькие экраны (до 400px) */
 @media (max-width: 399px) {
   .navbar-brand img {
     height: 50px;
@@ -781,6 +801,23 @@ h1 {
 
   .navbar-nav {
     font-size: 16px;
+  }
+
+  .carousel-inner {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition-delay: 0s !important;
+  }
+
+  .books {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition-delay: 0s !important;
+  }
+
+  center {
+    opacity: 1 !important;
+    transition-delay: 0s !important;
   }
 
   .carousel-item {

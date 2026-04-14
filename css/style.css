@@ -168,7 +168,6 @@
   -webkit-backface-visibility: hidden;
   border-radius: 10px;
   overflow: hidden;
-  border: 2px solid white;
 }
 
 .flip-card-book .flip-card-front img,

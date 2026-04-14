@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/fff.js">
+    <title>Document</title>
+</head>
+<body>
+  <div id="auth-overlay" class="auth-overlay">
+    <div class="auth-form">
+      <h2>Каэр Морхен</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="username">Имя Ведьмака</label>
+          <input type="text" id="username" name="username" placeholder="Введите ваше имя..." required autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label for="password">Тайное Слово</label>
+          <input type="password" id="password" name="password" placeholder="Произнесите пароль..." required autocomplete="off">
+        </div>
+        <p id="auth-error" class="auth-error"></p>
+        <button type="submit" class="btn-auth">Войти в Путь</button>
+      </form>
+      <span class="auth-runess">᚛ ᚜ ᚐ ᚑ ᚒ ᚓ ᚔ</span>
+    </div>
+  </div>
+
+  <div id="main-content" style="display: none;">
+  <video id="background-video" autoplay muted loop>
+  <source src="src/image/bg.mp4" type="video/mp4">
+  </video>
+    <nav class="navbar navbar-expand-lg bg-none">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#carouselExampleCaptions"><img src="src/image/logo.png" height="100" alt="Ведьмак"></a>
+    <button class="navbar-toggler" data-bs-theme="dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Переключатель навигации">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="#characters">Персонажи</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Книги
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://books.yandex.ru/reader/LZRQId0e?resource=book">Последнее желание</a></li>
+            <li><a class="dropdown-item" href="https://books.yandex.ru/reader/uHuS8eec?resource=book">Меч предназначения</a></li>
+            <li><a class="dropdown-item" href="https://books.yandex.ru/reader/xTTA2shp?resource=book">Кровь эльфов</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" href="#">Прохождения</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+  </div>
+  <div class="carousel-inner" id="characters">
+    <div class="carousel-item active">
+      <div class="flip-card-character">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="src/image/Герольт.jpg" class="d-block" alt="Герольт">
+            <div class="carousel-caption d-md-block">
+              <h5 class="t">Геральт из Ривии</h5>
+              <p class="tt">Главный персонаж вселенных "Ведьмак"</p>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="back-content">
+              <h5>Геральт из Ривии</h5>
+              <p>Геральт из Ривии — это профессиональный охотник на чудовищ, чьи способности отточены годами тренировок и усилены алхимическими мутациями. Он в совершенстве владеет боевым искусством, используя два меча: стальной для сражений с людьми и опасными тварями, и серебряный — для сверхъестественных монстров.</p>
+              <p>Для противостояния магическим угрозам он применяет простые, но мощные заклинания, известные как Знаки. С их помощью он может выпустить огненный поток Игни, создать телекинетический толчок Аарда, поставить магический щит Квена, наложить умопомрачающее воздействие Аксия или установить ловушку Ирден.</p>
+              <p>Его сила заключается не только в мече и магии. Как истинный ведьмак, он мастер алхимии. Он готовит и использует мощные, хоть и ядовитые, зелья, которые дарят ему временные сверхспособности, такие как ночное зрение или ускоренная реакция.</p>
+              <p>Его физиология также является его оружием. Процесс мутаций, известный как Испытание Травами, наделил его сверхчеловеческими чувствами, позволяя видеть в темноте и слышать то, что недоступно обычному человеку.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="flip-card-character">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="src/image/Цирилла.jpg" class="d-block" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="t">Цирилла</h5>
+              <p class="tt">Ученица и приемная дочь <br>Геральта</p>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="back-content">
+              <h5>Цирилла</h5>
+              <p>Она стала ребёнком-неожиданностью (Предназначением) ведьмака Геральта. Цирилла родилась в семье пятнадцатилетней принцессы Цинтры Паветты и её мужа Дани. На радость всем, девочка растёт весьма бойкой и активной.</p>
+              <p>Ко всему прочему, ей передалась красота своей матери, которая отражаясь в её утончённом лице, больших зелёных глазах и длинных, типичных для их рода, пепельно-серых волосах, обещала сделать из неё завидную невесту.</p>
+              <p>Уже с малого возраста Цири путешествует меж королевств. Будучи ещё совсем крохой она, вместе с бабушкой, множество раз отправлялась в плавание на острова Скеллиге к дяде Крах ан Крайту, где подолгу гостила.</p>
+              <p>С малых лет её няни рассказывают, что она является ребёнком-неожиданностью, предназначенным некоему беловолосому ведьмаку.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="flip-card-character">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="src/image/Lutik.webp" class="d-block" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="t">Лютик</h5>
+              <p class="tt">Лучший друг и спутник <br>Геральта</p>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="back-content">
+              <h5>Лютик</h5>
+              <p>Лютик представляет собой почти полную противоположность Геральта: он почти не может постоять за себя, нагл, но при этом труслив, болтлив и патологически не способен держать язык за зубами.</p>
+              <p>Тем не менее он не уступает своему другу в житейской мудрости, красноречии, остроумии, чувстве юмора и зачастую оказывается куда проницательнее и даже терпеливее ведьмака.</p>
+              <p>Лютик всё время предстаёт в образе вечного ребёнка, озабоченного лишь сиюминутными радостями и заботами. Он почти всегда весел и в хорошем настроении, никогда не унывает, добр и открыт к окружающим.</p>
+              <p>Лютик умён, хорошо образован, эрудирован, любознателен и слышит и замечает гораздо больше, чем кажется.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="flip-card-character">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="src/image/Yennefer.png" class="d-block" alt="Йеннифэр">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="t">Йеннифэр из Венгерберга</h5>
+              <p class="tt">Великая чародейка, любовь Геральта</p>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="back-content">
+              <h5>Йеннифэр из Венгерберга</h5>
+              <p>Йеннифэр — одна из самых могущественных чародеек Севера. Она выросла в нищете, но благодаря своему таланту стала могущественной волшебницей.</p>
+              <p>Её отношения с Геральтом — одна из центральных линий всей саги. Их связывает глубокое чувство, подкреплённое последним желанием Геральта.</p>
+              <p>Йеннифэр стала для Цири приёмной матерью, защищая и обучая её, несмотря на все опасности мира.</p>
+              <p>Она умна, решительна и не боится идти против сильных мира сего ради тех, кого любит.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="flip-card-character">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="src/image/Triss.jpg" class="d-block" alt="Трисс">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="t">Трисс Меригольд</h5>
+              <p class="tt">Чародейка, подруга Геральта</p>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="back-content">
+              <h5>Трисс Меригольд</h5>
+              <p>Трисс Меригольд — чародейка, одна из немногих, кто выжил во время атаки Нильфгаарда на Аэдирн.</p>
+              <p>Она — близкая подруга Геральта и Цири, к которой испытывает материнские чувства. Трисс была одной из тех, кто заботился о Цири после потери семьи.</p>
+              <p>Несмотря на свою молодость (ей чуть более ста лет), она является одной из влиятельных фигур в мире магии и политики.</p>
+              <p>Трисс известна своей добротой и состраданием, что редко встречается среди чародеев.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="flip-card-character">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="src/image/Vesemir.png" class="d-block" alt="Весемир">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="t">Весемир</h5>
+              <p class="tt">Старейший ведьмак, наставник Геральта</p>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="back-content">
+              <h5>Весемир</h5>
+              <p>Весемир — самый старый из известных ведьмаков. Ему более двухсот лет, и он помнит Каэр Морхен ещё до нападения фанатиков.</p>
+              <p>Он был наставником Геральта и других ведьмаков, обучая их мастерству боя и мудрости.</p>
+              <p>После разрушения Каэр Морхена Весемир остался одним из немногих выживших ведьмаков, посвятив себя обучению нового поколения.</p>
+              <p>Его опыт и мудрость делают его отцовской фигурой для всех ведьмаков Школы Волка.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="flip-card-character">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="src/image/Emhyr.jpg" class="d-block" alt="Эмгыр">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="t">Эмгыр вар Эмрейс</h5>
+              <p class="tt">Император Нильфгаарда</p>
+            </div>
+          </div>
+          <div class="flip-card-back">
+            <div class="back-content">
+              <h5>Эмгыр вар Эмрейс</h5>
+              <p>Эмгыр вар Эмрейс — император Нильфгаарда, один из самых могущественных правителей мира. Его называют «Белым Пламенем».</p>
+              <p>Он одержим поиском Цири, так как пророчество гласит, что его потомок от неё будет править миром.</p>
+              <p>Несмотря на свою жестокость и амбиции, Эмгыр — сложный персонаж, движимый не только жаждой власти, но и личными мотивами.</p>
+              <p>Его империя ведёт бесконечные войны с Северными Королевствами, стремясь к абсолютному господству.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+
+<div class="books">
+
+  <div class="flip-card-book">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="src/image/Последнее желание.jpeg" alt="Последнее желание">
+        <div class="card-body text-bg-secondary">
+          <h5 class="card-title">Последнее желание</h5>
+          <p class="card-text">Нажмите, чтобы узнать больше...</p>
+        </div>
+      </div>
+      <div class="flip-card-back">
+        <div class="back-content">
+          <h5>Последнее желание</h5>
+          <p>Книга вышла в серии второй, через год после «Меча предназначения», но рассказывает о более ранних событиях. Сборник рассказов знакомит читателя с Геральтом, Йеннифэр, Лютиком и другими ключевыми персонажами вселенной.</p>
+          <a href="https://books.yandex.ru/reader/LZRQId0e?resource=book" class="btn btn-light">Читать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card-book">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="src/image/Меч предназначения.jpeg" alt="Меч предназначения">
+        <div class="card-body text-bg-secondary">
+          <h5 class="card-title">Меч предназначения</h5>
+          <p class="card-text">Нажмите, чтобы узнать больше...</p>
+        </div>
+      </div>
+      <div class="flip-card-back">
+        <div class="back-content">
+          <h5>Меч предназначения</h5>
+          <p>Второй сборник рассказов помогает лучше понять моральный кодекс Геральта в том, что касается истребления монстров. Здесь раскрывается история встречи с Цири и Предназначением.</p>
+          <a href="https://books.yandex.ru/reader/uHuS8eec?resource=book" class="btn btn-light">Читать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flip-card-book">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="src/image/Кровь эльфов.jpeg" alt="Кровь эльфов">
+        <div class="card-body text-bg-secondary">
+          <h5 class="card-title">Кровь эльфов</h5>
+          <p class="card-text">Нажмите, чтобы узнать больше...</p>
+        </div>
+      </div>
+      <div class="flip-card-back">
+        <div class="back-content">
+          <h5>Кровь эльфов</h5>
+          <p>Первый полноценный роман саги рассказывает о том, как император Нильфгаарда пытается найти Цири, в которой течет эльфийская кровь. Геральт становится наставником девочки.</p>
+          <a href="https://books.yandex.ru/reader/xTTA2shp?resource=book" class="btn btn-light">Читать</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<h1 class="text-white">Прохождение "Ведьмак"</h1>
+
+<center>
+  <iframe src="https://vkvideo.ru/video_ext.php?oid=-197386448&id=456243763&hash=de87f33f2b65b5d1&hd=3" class="if_one" width="500" height="500" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+
+  <iframe src="https://vkvideo.ru/video_ext.php?oid=-227081618&id=456239214&hash=eb4f79761a68845a&hd=3" width="500" height="500" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+</center>
+
+
+<footer>
+  <div class="fot">
+    <ul>
+      <a class="ft" href="https://t.me/Dmitry807">Telegram</a>
+      <a class="ft" href="mailto:julesforrest@gmail.com">Email</a>
+      <a class="ft" href="https://github.com">Github</a>
+    </ul>
+    <button id="logout-btn" class="btn-logout">Выйти</button>
+  </div>
+</footer>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      function setCookie(name, value, days) {
+        var expires = '';
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = '; expires=' + date.toUTCString();
+        }
+        document.cookie = name + '=' + encodeURIComponent(value) + expires + '; path=/';
+      }
+
+      function getCookie(name) {
+        var nameEQ = name + '=';
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+          var c = cookies[i].replace(/^\s+/, '');
+          if (c.indexOf(nameEQ) == 0) {
+            return decodeURIComponent(c.substring(nameEQ.length));
+          }
+        }
+        return null;
+      }
+
+      function eraseCookie(name) {
+        document.cookie = name + '=; Max-Age=-99999999; path=/';
+      }
+
+      var VALID_USERNAME = 'Dima';
+      var VALID_PASSWORD = 'qwert12345';
+
+      var authOverlay = document.getElementById('auth-overlay');
+      var mainContent = document.getElementById('main-content');
+      var loginForm = document.getElementById('login-form');
+      var authError = document.getElementById('auth-error');
+      var logoutBtn = document.getElementById('logout-btn');
+
+      if (getCookie('witcher_auth') === 'true') {
+        showMainContent();
+      }
+
+      function showMainContent() {
+        authOverlay.classList.add('hidden');
+        mainContent.style.display = 'block';
+      }
+
+      function showAuthForm() {
+        authOverlay.classList.remove('hidden');
+        mainContent.style.display = 'none';
+        eraseCookie('witcher_auth');
+        eraseCookie('witcher_username');
+      }
+
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var username = document.getElementById('username').value.trim();
+        var password = document.getElementById('password').value;
+
+        if (username === VALID_USERNAME && password === VALID_PASSWORD) {
+          setCookie('witcher_auth', 'true', 7);
+          setCookie('witcher_username', username, 7);
+          authError.textContent = '';
+          showMainContent();
+          loginForm.reset();
+        } else {
+          authError.textContent = 'Неверный логин или пароль';
+        }
+      });
+
+      logoutBtn.addEventListener('click', function() {
+        showAuthForm();
+      });
+
+
+      document.querySelectorAll('.flip-card-character').forEach(function(card) {
+        card.addEventListener('click', function() {
+          card.classList.toggle('flipped');
+        });
+      });
+
+      document.querySelectorAll('.flip-card-book').forEach(function(card) {
+        card.addEventListener('click', function() {
+          card.classList.toggle('flipped');
+        });
+      });
+    </script>
+</body>
+</html>

@@ -516,6 +516,35 @@ h1 {
   color: #1e1e1e;
 }
 
+/* ========================================
+   МОБИЛЬНАЯ АДАПТИВНОСТЬ
+   ======================================== */
+
+/* Для мобильных устройств с touch - все видно сразу */
+.mobile-device .carousel-inner,
+.mobile-device .books,
+.mobile-device center {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: none !important;
+  transition-delay: 0s !important;
+}
+
+.mobile-device .carousel-inner:hover {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.mobile-device .books:hover {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+.mobile-device center:hover {
+  opacity: 1 !important;
+}
+
+/* Планшетные устройства (768px - 992px) */
 @media (max-width: 991px) {
   .navbar {
     margin-bottom: 50px;
@@ -558,6 +587,7 @@ h1 {
   }
 }
 
+/* Мобильные устройства (до 768px) */
 @media (max-width: 767px) {
   #background-video {
     min-width: 100%;
@@ -577,24 +607,43 @@ h1 {
     text-align: center;
   }
 
+  /* На мобильных все элементы видны сразу - переопределяем базовые стили */
   .carousel-inner {
+    margin-bottom: 50px;
     opacity: 1 !important;
     transform: translateX(0) !important;
+    transition: none !important;
     transition-delay: 0s !important;
-    margin-bottom: 50px;
+  }
+
+  .carousel-inner:hover {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
   }
 
   .books {
+    margin-bottom: 80px;
     opacity: 1 !important;
     transform: translateX(0) !important;
+    transition: none !important;
     transition-delay: 0s !important;
-    margin-bottom: 80px;
     gap: 20px;
+  }
+
+  .books:hover {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    margin-bottom: 80px;
   }
 
   center {
     opacity: 1 !important;
+    transition: none !important;
     transition-delay: 0s !important;
+  }
+
+  center:hover {
+    opacity: 1 !important;
   }
 
   .carousel-item {
@@ -705,6 +754,7 @@ h1 {
   }
 }
 
+/* Маленькие мобильные устройства (до 576px) */
 @media (max-width: 575px) {
   .navbar-brand img {
     height: 60px;
@@ -714,21 +764,22 @@ h1 {
     font-size: 18px;
   }
 
+  /* На мобильных все элементы видны сразу */
   .carousel-inner {
     opacity: 1 !important;
     transform: translateX(0) !important;
-    transition-delay: 0s !important;
+    transition: none !important;
   }
 
   .books {
     opacity: 1 !important;
     transform: translateX(0) !important;
-    transition-delay: 0s !important;
+    transition: none !important;
   }
 
   center {
     opacity: 1 !important;
-    transition-delay: 0s !important;
+    transition: none !important;
   }
 
   .carousel-item {
@@ -794,6 +845,7 @@ h1 {
   }
 }
 
+/* Очень маленькие экраны (до 400px) */
 @media (max-width: 399px) {
   .navbar-brand img {
     height: 50px;
@@ -803,21 +855,22 @@ h1 {
     font-size: 16px;
   }
 
+  /* На мобильных все элементы видны сразу */
   .carousel-inner {
     opacity: 1 !important;
     transform: translateX(0) !important;
-    transition-delay: 0s !important;
+    transition: none !important;
   }
 
   .books {
     opacity: 1 !important;
     transform: translateX(0) !important;
-    transition-delay: 0s !important;
+    transition: none !important;
   }
 
   center {
     opacity: 1 !important;
-    transition-delay: 0s !important;
+    transition: none !important;
   }
 
   .carousel-item {

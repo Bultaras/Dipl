@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentUserSpan = document.getElementById('current-user');
   const loginError = document.getElementById('login-error');
   const regError = document.getElementById('reg-error');
+  const authTitle = document.getElementById('auth-title');
 
   function getCookie(name) {
     const value = '; ' + document.cookie;
@@ -59,8 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
         registerForm.reset();
         registerForm.classList.add('hidden');
         loginForm.classList.remove('hidden');
-        switchToRegister.classList.add('hidden');
-        switchToLogin.classList.remove('hidden');
+        switchToRegister.classList.remove('hidden');
+        switchToLogin.classList.add('hidden');
+        authTitle.textContent = 'ВОЙТИ';
       } else {
         regError.textContent = 'Заполните все поля (пароль мин. 4 символа)';
       }
@@ -97,10 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (switchToRegister) {
     switchToRegister.addEventListener('click', (e) => {
       e.preventDefault();
-      loginForm?.classList.add('hidden');
-      registerForm?.classList.remove('hidden');
+      loginForm.classList.add('hidden');
+      registerForm.classList.remove('hidden');
       switchToRegister.classList.add('hidden');
-      switchToLogin?.classList.remove('hidden');
+      switchToLogin.classList.remove('hidden');
+      authTitle.textContent = 'СОЗДАТЬ АККАУНТ';
       loginError.textContent = '';
       regError.textContent = '';
     });
@@ -109,10 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (switchToLogin) {
     switchToLogin.addEventListener('click', (e) => {
       e.preventDefault();
-      registerForm?.classList.add('hidden');
-      loginForm?.classList.remove('hidden');
+      registerForm.classList.add('hidden');
+      loginForm.classList.remove('hidden');
       switchToLogin.classList.add('hidden');
-      switchToRegister?.classList.remove('hidden');
+      switchToRegister.classList.remove('hidden');
+      authTitle.textContent = 'ВОЙТИ';
       loginError.textContent = '';
       regError.textContent = '';
     });

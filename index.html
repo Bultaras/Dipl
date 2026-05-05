@@ -16,7 +16,7 @@
     <div class="video-overlay"></div>
   </div>
 
-  <div class="auth-overlay">
+  <div class="auth-overlay" id="auth-overlay">
     <div class="auth-form">
       <h2>ВОЙТИ</h2>
       
@@ -33,7 +33,7 @@
         <button type="submit" class="btn-auth">ВОЙТИ</button>
       </form>
 
-      <form id="register-form" class="hidden">
+      <form id="register-form" style="display: none;">
         <div class="form-group">
           <label>ИМЯ</label>
           <input type="text" id="reg-username" placeholder="Придумайте имя" required>
@@ -47,7 +47,7 @@
       </form>
 
       <a href="#" id="switch-to-register">Нет аккаунта? Создать</a>
-      <a href="#" id="switch-to-login" class="hidden">Уже есть аккаунт? Войти</a>
+      <a href="#" id="switch-to-login" style="display: none;">Уже есть аккаунт? Войти</a>
       
       <span class="auth-runess">✦ ✦ ✦</span>
     </div>
@@ -70,7 +70,7 @@
         </ul>
         <div class="navbar-nav">
           <span id="current-user" class="nav-link"></span>
-          <button id="logout-btn" class="btn-logout hidden">Выйти</button>
+          <button id="logout-btn" class="btn-logout" style="display: none;">Выйти</button>
         </div>
       </div>
     </div>

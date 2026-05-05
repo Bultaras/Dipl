@@ -1,23 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.flip-card-character, .flip-card-book').forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('flipped');
-    });
-  });
+  const cards = document.querySelectorAll('.flip-card-character, .flip-card-book');
+  
+  function handleFlip(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const card = e.currentTarget;
+    const isFlipped = card.classList.contains('flipped');
+    
+    if (isFlipped) {
+      card.classList.remove('flipped');
+    } else {
+      document.querySelectorAll('.flip-card-character, .flip-card-book').forEach(c => c.classList.remove('flipped'));
+      card.classList.add('flipped');
+    }
+  }
 
-  document.querySelectorAll('.map-point').forEach(point => {
-    point.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const location = point.getAttribute('data-location');
-      alert('Локация: ' + location);
-    });
+  cards.forEach(card => {
+    card.addEventListener('click', handleFlip);
+    card.addEventListener('touchend', (e) => {
+      if (e.changedTouches.length === 1) {
+        handleFlip(e);
+      }
+    }, { passive: false });
   });
 
   document.addEventListener('click', (e) => {
     if (!e.target.closest('.flip-card-inner')) {
-      document.querySelectorAll('.flip-card-inner').forEach(inner => {
-        inner.parentElement.classList.remove('flipped');
-      });
+      cards.forEach(c => c.classList.remove('flipped'));
     }
   });
 });

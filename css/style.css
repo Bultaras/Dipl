@@ -105,16 +105,6 @@ body {
 
 .carousel-inner {
   margin-bottom: 100px;
-  opacity: 0;
-  transform: translateX(-500px);
-  transition-delay: 120s;
-}
-
-.carousel-inner:hover {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 0.5s;
-  transition-delay: 0s;
 }
 
 .carousel-item {
@@ -129,6 +119,11 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  pointer-events: auto !important;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .flip-card-inner {
@@ -137,6 +132,8 @@ body {
   height: 500px;
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
+  pointer-events: auto !important;
+  cursor: pointer;
 }
 
 .flip-card-character.flipped .flip-card-inner {
@@ -149,8 +146,10 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 10px;
   overflow: hidden;
+  pointer-events: auto !important;
 }
 
 .flip-card-front img {
@@ -211,20 +210,9 @@ body {
 .books {
   display: flex;
   margin-bottom: 150px;
-  opacity: 0;
-  transform: translateX(500px);
-  transition-delay: 120s;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-}
-
-.books:hover {
-  opacity: 1;
-  transform: translateX(0px);
-  transition: 0.5s;
-  transition-delay: 0s;
-  margin-bottom: 150px;
 }
 
 .flip-card-book {
@@ -233,6 +221,11 @@ body {
   height: 600px;
   perspective: 1000px;
   cursor: pointer;
+  pointer-events: auto !important;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .flip-card-book .flip-card-inner {
@@ -241,6 +234,8 @@ body {
   height: 100%;
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
+  pointer-events: auto !important;
+  cursor: pointer;
 }
 
 .flip-card-book.flipped .flip-card-inner {
@@ -253,8 +248,10 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   border-radius: 10px;
   overflow: hidden;
+  pointer-events: auto !important;
 }
 
 .flip-card-book .flip-card-front img,
@@ -304,14 +301,7 @@ body {
 }
 
 center {
-  opacity: 0;
-  transition-delay: 120s;
-}
-
-center:hover {
-  opacity: 1;
-  transition: 1s;
-  transition-delay: 0s;
+  display: block;
 }
 
 iframe {
@@ -479,7 +469,7 @@ h1, h2, h3, h4 {
 }
 
 .auth-overlay.hidden {
-  display: none;
+  display: none !important;
 }
 
 .auth-form {
@@ -758,29 +748,6 @@ h1, h2, h3, h4 {
   line-height: 1.4;
 }
 
-.mobile-device .carousel-inner,
-.mobile-device .books,
-.mobile-device center {
-  opacity: 1 !important;
-  transform: translateX(0) !important;
-  transition: none !important;
-  transition-delay: 0s !important;
-}
-
-.mobile-device .carousel-inner:hover {
-  opacity: 1 !important;
-  transform: translateX(0) !important;
-}
-
-.mobile-device .books:hover {
-  opacity: 1 !important;
-  transform: translateX(0) !important;
-}
-
-.mobile-device center:hover {
-  opacity: 1 !important;
-}
-
 .btn-read {
   display: inline-block;
   margin-top: 15px;
@@ -828,12 +795,8 @@ h1, h2, h3, h4 {
   .navbar-brand img { height: 50px; }
   .navbar-toggler { border-color: #8B6914; }
   .navbar-toggler-icon { background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(201, 168, 76, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
-  .carousel-inner { margin-bottom: 50px; opacity: 1 !important; transform: translateX(0) !important; transition: none !important; transition-delay: 0s !important; }
-  .carousel-inner:hover { opacity: 1 !important; transform: translateX(0) !important; }
-  .books { margin-bottom: 80px; opacity: 1 !important; transform: translateX(0) !important; transition: none !important; transition-delay: 0s !important; gap: 20px; }
-  .books:hover { opacity: 1 !important; transform: translateX(0) !important; margin-bottom: 80px; }
-  center { opacity: 1 !important; transition: none !important; transition-delay: 0s !important; }
-  center:hover { opacity: 1 !important; }
+  .carousel-inner { margin-bottom: 50px; }
+  .books { margin-bottom: 80px; gap: 20px; }
   .carousel-item { height: auto; min-height: 500px; }
   .flip-card-character { padding: 0 15px; }
   .flip-card-inner { width: 100%; max-width: 340px; height: 520px; margin: 0 auto; }
@@ -857,9 +820,6 @@ h1, h2, h3, h4 {
 
 @media (max-width: 575px) {
   .navbar-brand img { height: 45px; }
-  .carousel-inner { opacity: 1 !important; transform: translateX(0) !important; transition: none !important; }
-  .books { opacity: 1 !important; transform: translateX(0) !important; transition: none !important; }
-  center { opacity: 1 !important; transition: none !important; }
   .carousel-item { min-height: 450px; }
   .flip-card-inner { height: 480px; }
   .flip-card-front img { height: 480px; }
@@ -878,9 +838,6 @@ h1, h2, h3, h4 {
 
 @media (max-width: 399px) {
   .navbar-brand img { height: 40px; }
-  .carousel-inner { opacity: 1 !important; transform: translateX(0) !important; transition: none !important; }
-  .books { opacity: 1 !important; transform: translateX(0) !important; transition: none !important; }
-  center { opacity: 1 !important; transition: none !important; }
   .carousel-item { min-height: 400px; }
   .flip-card-inner { height: 430px; }
   .flip-card-front img { height: 430px; }
@@ -890,4 +847,12 @@ h1, h2, h3, h4 {
   iframe { height: 180px; }
   .auth-form { padding: 25px 20px; }
   .auth-form h2 { font-size: 20px; }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .flip-card-character,
+  .flip-card-book {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
 }

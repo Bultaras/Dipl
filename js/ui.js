@@ -1,33 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.flip-card-character, .flip-card-book');
   
-  function handleFlip(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    const card = e.currentTarget;
-    const isFlipped = card.classList.contains('flipped');
-    
-    if (isFlipped) {
-      card.classList.remove('flipped');
-    } else {
-      document.querySelectorAll('.flip-card-character, .flip-card-book').forEach(c => c.classList.remove('flipped'));
-      card.classList.add('flipped');
-    }
-  }
-
   cards.forEach(card => {
-    card.addEventListener('click', handleFlip);
-    card.addEventListener('touchend', (e) => {
-      if (e.changedTouches.length === 1) {
-        handleFlip(e);
-      }
+    const newCard = card.cloneNode(true);
+    card.parentNode.replaceChild(newCard, card);
+    
+    newCard.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      cards.forEach(c => {
+        if (c !== newCard) c.classList.remove('flipped');
+      });
+      this.classList.toggle('flipped');
+    });
+
+    newCard.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      cards.forEach(c => {
+        if (c !== newCard) c.classList.remove('flipped');
+      });
+      
+      this.classList.toggle('flipped');
     }, { passive: false });
   });
-
+  
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.flip-card-inner')) {
-      cards.forEach(c => c.classList.remove('flipped'));
+    if (!e.target.closest('.flip-card-inner') && !e.target.closest('.flip-card-character') && !e.target.closest('.flip-card-book')) {
+      cards.forEach(card => card.classList.remove('flipped'));
     }
   });
 });

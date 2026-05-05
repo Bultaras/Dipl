@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
         registerForm.reset();
         registerForm.classList.add('hidden');
         loginForm.classList.remove('hidden');
-        switchToRegister.classList.remove('hidden');
-        switchToLogin.classList.add('hidden');
-        authTitle.textContent = 'ВОЙТИ';
+        switchToRegister.classList.add('hidden');
+        switchToLogin.classList.remove('hidden');
+        if (authTitle) authTitle.textContent = 'ВОЙТИ';
       } else {
         regError.textContent = 'Заполните все поля (пароль мин. 4 символа)';
       }
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
       registerForm.classList.remove('hidden');
       switchToRegister.classList.add('hidden');
       switchToLogin.classList.remove('hidden');
-      authTitle.textContent = 'СОЗДАТЬ АККАУНТ';
+      if (authTitle) authTitle.textContent = 'СОЗДАТЬ АККАУНТ';
       loginError.textContent = '';
       regError.textContent = '';
     });
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       loginForm.classList.remove('hidden');
       switchToLogin.classList.add('hidden');
       switchToRegister.classList.remove('hidden');
-      authTitle.textContent = 'ВОЙТИ';
+      if (authTitle) authTitle.textContent = 'ВОЙТИ';
       loginError.textContent = '';
       regError.textContent = '';
     });

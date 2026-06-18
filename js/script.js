@@ -80,14 +80,4 @@ function setCookie(name, value, days) {
         document.documentElement.classList.add('mobile-device');
       }
 
-      document.querySelectorAll('.flip-card-character').forEach(function(card) {
-        card.addEventListener('click', function() {
-          card.classList.toggle('flipped');
-        });
-      });
 
-      document.querySelectorAll('.flip-card-book').forEach(function(card) {
-        card.addEventListener('click', function() {
-          card.classList.toggle('flipped');
-        });
-      });
